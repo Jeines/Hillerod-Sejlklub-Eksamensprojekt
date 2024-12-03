@@ -27,6 +27,10 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             Description = description;
         }
 
+        public override string ToString() { return "Boat Id" + BoatId + "Name" + Name + "Boat lenght" + Lenght + "Boat width " + Width + "Mast" + Mast + "Boat weight" + Weight + "Boat description" + Description; }
+        
+           
+     
 
 
     }
