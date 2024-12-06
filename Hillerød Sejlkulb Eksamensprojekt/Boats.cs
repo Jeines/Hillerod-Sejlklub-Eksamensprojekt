@@ -17,7 +17,9 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public int Weight { get; set; }
         public string RepairsNeeded { get; set; }
 
-        public Boats(int boatId, string name, double lenght, double width, double mast, int weight, string description, string repairsNeeded)
+        public string Comment { get; set; }
+
+        public Boats(int boatId, string name, double lenght, double width, double mast, int weight, string comment, string description, string repairsNeeded)
         {
             BoatName = name;
             BoatId = boatId;
@@ -25,14 +27,18 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             Width = width;
             Mast = mast;
             Weight = weight;
+            Comment = comment;
             Description = description;
             RepairsNeeded = repairsNeeded;
         }
 
-        public override string ToString() { return "Boat Id" + BoatId + "Name" + BoatName + "Boat lenght" + Lenght + "Boat width " + Width + "Mast" + Mast + "Boat weight" + Weight + "Boat description" + Description + "Repairs needed" + RepairsNeeded; }
+        //public override string ToString() { return "Boat Id" + BoatId + "Name" + BoatName + "Boat lenght" +  Lenght + "Meter " + "Boat width " + Width + "Meter " + "Mast" + Mast + "Meter " + "Boat weight" + Weight + "Kg" + "Infomation" + Comment +"Boat description"  + Description + "Repairs needed" + RepairsNeeded; }
         
            
-     
+        public override string ToString()
+        {
+            return $"Boat Id: ({BoatId}) |  Boat Name: {BoatName}  |  Boat Lenght: {Lenght}M  |  Boat Width: {Width}M  |  Boat Mast: {Mast}M  |   Boat Weight: {Weight}Kg  \nBoat Infomation: ({Comment}) |  Boat Description: {Description}  \nRepairs Needed: ({RepairsNeeded})  \n \n";
+        }
 
 
     }
