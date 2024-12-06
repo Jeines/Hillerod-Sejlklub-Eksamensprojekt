@@ -13,9 +13,9 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
         public MembersList()
         {
-            Member.Add(new Members(1, "Bob", "Hansen", 23425234, "Bobbislobbi@gmail.com", "banangade"));
+            Member.Add(new Members(1, "Bob", "Hansen", 23425234, "Bobbislobbi@gmail.com", "banangade 9"));
             Member.Add(new Members(2, "Herold", "Fiji", 58426597, "Vandmand@hotmail.vand", "Ocean 78"));
-            Member.Add(new Members(3, "Fi", "Thá", 64259718, "fitabrødelsker@ambasaden.com", "Ovngade"));
+            Member.Add(new Members(3, "Fi", "Thá", 64259718, "fitabrødelsker@ambasaden.com", "Ovngade 12"));
             Member.Add(new Members(4, "Neptun ", " Mamoa", 22222223, "Saveallfisk69@atlantiserikkeetaquarium.dk ","Havet 22"));
             Member.Add(new Members(5, "Jeremy ", "Bingvin ", 58264751, "Iglonyder99@gulsne.com ", "Antarktis 63"));
             Member.Add(new Members(6, "Henriki ", "Esteban ", 85475126, "bean45@hotmail.dk ", "bønnegården 847"));
