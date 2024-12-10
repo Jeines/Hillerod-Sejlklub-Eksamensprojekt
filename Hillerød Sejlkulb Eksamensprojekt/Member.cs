@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hillerød_Sejlkulb_Eksamensprojekt
 {
-    public class Members
+    public class Member
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -17,7 +17,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
 
 
-        public Members(int id, string name, string lastname, int phonenumber, string email, string address)
+        public Member(int id, string name, string lastname, int phonenumber, string email, string address)
         {
             Id = id;
             Name = name;

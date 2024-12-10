@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hillerød_Sejlkulb_Eksamensprojekt
 {
-    public class Boats
+    public class Boat
     {
         public string BoatName {  get; set; }
         public int BoatId {  get; set; }
@@ -19,7 +19,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
         public string Comment { get; set; }
 
-        public Boats(int boatId, string name, double lenght, double width, double mast, int weight, string comment, string description, string repairsNeeded)
+        public Boat(int boatId, string name, double lenght, double width, double mast, int weight, string comment, string description, string repairsNeeded)
         {
             BoatName = name;
             BoatId = boatId;
