@@ -1,20 +1,60 @@
 ﻿using Hillerød_Sejlkulb_Eksamensprojekt;
 
-BoatsList boats = new BoatsList();
 
-boats.PrintBoats();
+ void PrintBoats(List<Boat> boatList)
+{
+    foreach (Boat Boats in boatList)
+    {
+        Console.WriteLine(Boats);
+    }
+
+}
+
+//BoatsList print program
+BoatsRepo boats = new BoatsRepo();
+PrintBoats(boats.GetAllBoats());
 
 
-MembersList members = new MembersList();
-
-members.PrintMembersList();
-
-SubscribtionList sub = new SubscribtionList();
-
-sub.PrintSubscribtionList();
+///////////////////////////////////////////////////////////////////////////
 
 
+void PrintMembersList(List<Member> memberList)
+{
+    foreach (Member members in memberList)
+    {
+        Console.WriteLine(members);
+    }
+}
 
+
+//MembersList print program
+MembersRepo members = new MembersRepo();
+PrintMembersList(members.GetAllMembers());
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+void PrintSubscribtionList(List<Subscribtion> subList)
+{
+    foreach (Subscribtion subscribtion in subList)
+    {
+        Console.WriteLine(subscribtion);
+    }
+}
+
+// Subscribtion og priser print program
+SubscribtionRepo sub = new SubscribtionRepo();
+PrintSubscribtionList(sub.GetAllSubscribtions());
+
+
+//////////////////////////////////////////////////////////////////////////
+
+
+
+//Åbnings Tid print program
+ÅbningsTider Åbning = new ÅbningsTider();
+Åbning.Start();
 
 
 
