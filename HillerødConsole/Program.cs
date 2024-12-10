@@ -9,6 +9,10 @@ MembersList members = new MembersList();
 
 members.PrintMembersList();
 
+SubscribtionList sub = new SubscribtionList();
+
+sub.PrintSubscribtionList();
+
 
 
 

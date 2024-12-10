@@ -28,12 +28,6 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
 
 
-
-
-
-
-
-
         // her tilføjer vi en båd til vores båd liste.
         public void AddBoat(Boats boat) 
         {

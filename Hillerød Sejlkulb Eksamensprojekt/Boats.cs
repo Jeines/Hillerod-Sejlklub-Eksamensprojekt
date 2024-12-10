@@ -33,11 +33,11 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         }
 
         //public override string ToString() { return "Boat Id" + BoatId + "Name" + BoatName + "Boat lenght" +  Lenght + "Meter " + "Boat width " + Width + "Meter " + "Mast" + Mast + "Meter " + "Boat weight" + Weight + "Kg" + "Infomation" + Comment +"Boat description"  + Description + "Repairs needed" + RepairsNeeded; }
-        
-           
+
+
         public override string ToString()
         {
-            return $"Boat Id: ({BoatId}) |  Boat Name: {BoatName}  |  Boat Lenght: {Lenght}M  |  Boat Width: {Width}M  |  Boat Mast: {Mast}M  |   Boat Weight: {Weight}Kg  \nBoat Infomation: ({Comment}) |  Boat Description: {Description}  \nRepairs Needed: ({RepairsNeeded})  \n \n";
+            return $"Boat Id: ({BoatId}) |  Boat Name: {BoatName}  |  Boat Lenght: {Lenght}M  |  Boat Width: {Width}M  |  Boat Mast: {Mast}M  |   Boat Weight: {Weight}Kg  \nBoat Infomation: ({Comment}) \nBoat Description: {Description}  \nRepairs Needed: ({RepairsNeeded})  \n \n";
         }
 
 

@@ -32,7 +32,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         {
             //return "Memberid " + Id + "Name " + Name + " " + LastName + " " + PhoneNumber + " " + Email + " " + Address;
 
-            return $"Members Id: ({Id}) | Navn: {Name} | Last Name: {LastName} \nAddress: {Address} \nPhone Number: {PhoneNumber} \nEmail: {Email}  \n  ";
+           return $"Members Id: ({Id}) | Navn: {Name} | Last Name: {LastName} \nAddress: {Address} \nPhone Number: {PhoneNumber} \nEmail: {Email}  \n  ";
         }
     }
     

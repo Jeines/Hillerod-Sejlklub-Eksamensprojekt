@@ -22,7 +22,9 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         }
         public override string ToString()
         {
-            return " ID" + Id + "Subscribtion type" + SubscriptionType + " Price " + Price;
+            //return " ID" + Id + "Subscribtion type" + SubscriptionType + " Price " + Price;
+
+            return $"Subscribtion Id: {Id} \nSubscribtion Type: {SubscriptionType} \nPrice: {Price} Kr.  \n";
 
         }
     }
