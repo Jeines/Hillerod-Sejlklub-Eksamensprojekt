@@ -76,11 +76,11 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         }
 
         // En metode der kan opdatere vore medlemmer ved hjælp af ID. Den kan opdatere alle de nedrestående variabler.
-        public Members Update(int iD, Members member)
+        public Members Update(int Id, Members member)
         {
             foreach (Members m in Member)
             {
-                if (m.Id == iD)
+                if (m.Id == Id)
                 {
                     m.Name = member.Name;
                     m.LastName = member.LastName;
@@ -89,7 +89,6 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
                     m.Email = member.Email;
                 }
             }
-
             return member;
         }
         
