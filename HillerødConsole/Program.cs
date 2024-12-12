@@ -57,6 +57,17 @@ PrintSubscribtionList(sub.GetAllSubscribtions());
 Åbning.Start();
 
 
+void PrintVedtægter(List<string> vedtægterrepo)
+{
+    foreach (string vedtægter in vedtægterrepo)
+    {
+        Console.WriteLine(vedtægter);
+    }
+}
+Vedtægter ved = new Vedtægter();
+PrintVedtægter(ved.GetVedtægter());
+Console.WriteLine();
+Console.WriteLine(ved.GetVedtægt(2));
 
 
 //namespace HillerødConsole
