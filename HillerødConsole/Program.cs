@@ -52,10 +52,6 @@ PrintSubscribtionList(sub.GetAllSubscribtions());
 
 
 
-//Åbnings Tid print program
-ÅbningsTider Åbning = new ÅbningsTider();
-Åbning.Start();
-
 
 void PrintVedtægter(List<string> vedtægterrepo)
 {
@@ -68,6 +64,20 @@ Vedtægter ved = new Vedtægter();
 PrintVedtægter(ved.GetVedtægter());
 Console.WriteLine();
 Console.WriteLine(ved.GetVedtægt(2));
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+//Test af Events
+CustomEventsRepo customEvents = new CustomEventsRepo();
+customEvents.TestEventsList();
+
+
+
+
+
+
+
 
 
 //namespace HillerødConsole
