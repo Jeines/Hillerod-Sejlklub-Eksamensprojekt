@@ -74,7 +74,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         }
 
         // her kan vi finde en båd ud fra den id og derefter updatere specifikie elementer som for eksempel navn
-        public Boat Update(int BoatId, Boat boats)
+        public Boat UpdateBoats(int BoatId, Boat boats)
         {
             foreach (Boat b in boatList)
             {
@@ -85,6 +85,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
                     b.Width = boats.Width;
                     b.Mast = boats.Mast;
                     b.Weight = boats.Weight;
+                    b.Comment = boats.Comment;
                     b.Description = boats.Description;
                     b.RepairsNeeded = boats.RepairsNeeded;
                     

@@ -29,6 +29,18 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             subscribtion.Add(subscribtion);
         }
 
+        public Subscribtion GetSubscribtion(int id)
+        {
+            foreach ( Subscribtion sub  in subList)
+            {
+                if (sub.Id == id)
+                    return sub;
+            }
+            return null!;
+        }
+
+
+
        // fjerne en subscribtion fra subscribtion listen
         public bool RemoveSubscription(int Id)
         {
