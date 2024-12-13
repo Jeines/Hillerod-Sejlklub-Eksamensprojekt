@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hillerød_Sejlkulb_Eksamensprojekt
 {
-    public class BoatsRepo:IBoatsRepo
+    public class BoatsRepo : IBoatsRepo
     {
         public List<Boat> boatList = new List<Boat>();
 

@@ -12,7 +12,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public bool RemoveBoat(int id);
         public Boat? GetBoatById(int id);
         public Boat? GetBoatByName(string name);
-        public Boat Update(int BoatId, Boat boats);
+        public Boat UpdateBoats(int BoatId, Boat boats);
         public List<Boat> GetAllBoats();
 
 
