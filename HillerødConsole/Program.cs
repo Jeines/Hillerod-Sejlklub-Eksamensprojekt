@@ -1,6 +1,4 @@
 ﻿using Hillerød_Sejlkulb_Eksamensprojekt;
-using System.Security.Cryptography.X509Certificates;
-
 
 void PrintBoats(List<Boat> boatList)
 {
