@@ -13,14 +13,14 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
         public BoatsRepo()
         {
-            boatList.Add(new Boat(1, "Optimist ", 2.31, 1.13, 2.25, 35, "Crew 1 person.", "The Optimist is one of the most popular singel-handed sailing dinghies in the world, designed specifically for young sailors up to the age of 15. The Optimist is made out of fiberglass. ", "none"));
-            boatList.Add(new Boat(2, "Tera  ", 2.87 , 1.23 , 2.37 , 39 , " Crew 1 person. " , "The Tera is a modern dinghy desingned for young sailors, typically from the age 8 and up. The Tera is made out of polyethylene. " , "none "));
-            boatList.Add(new Boat(3, "Feva ", 3.64, 1.42, 2.41, 63,"Crew 1-2 people. ", " The Feva is a very popular dinghy that can be sailed by one or two people. The Feva is made out of polyethylene. ", "none"));
-            boatList.Add(new Boat(4, "Laser ", 4.23, 1.42, 3.38, 59,"Crew 1 person. ", "The Laser is one of the most popular single-handed dinghies in the world, used for both relaxed sailing and racing. The laser is made out of fiberglass-reinforced plastic ", "none"));
-            boatList.Add(new Boat(5, "Europe ", 3.35, 1.38, 4.8, 60,"Crew 1 person. ", "The Europe dinghy is a popular single-handed dinghy ideal for sailors who have outgrown the Optimist. The Europe is made out of fiberglass", "none"));
-            boatList.Add(new Boat(6, "Snipe ", 4.72, 1.52, 4.9, 172,"Crew 2 people.", "The Snipe dinghy is a classic two-person dinghy known for its tacticla sailing and durability. The snipe is made out of fiberglass. ", "none"));
-            boatList.Add(new Boat(7, "Wayfarer ", 4.82, 1.85, 5.2, 167,"Crew 2-4 people.", "The Wayfarer dinghy is a versatile and robust sailing dinghy, popular for both racing, cruising, and as training boat. The Wayfarer is made out of fiberglass ", "none"));
-            boatList.Add(new Boat(8, "Lynæs ",4 , 1.55, 4.2, 150, "Crew 1-2 people.", " The Lynæs dinghy is a traditinal Danish boat known for its seaworthiness and robust construction. The Lynæs is traditinally made out of oak but the modern version is made out of fiberglass. ", "none"));
+            boatList.Add(new Boat(1, "Optimist ", 2.31, 1.13, 2.25, 35, "Besætning 1 person.", "Optimisten er en af de mest populære enmandsjoller i verden, designet specifikt til unge sejlere op til 15 år. Optimisten er lavet af glasfiber. ", "Ingen Skader"));
+            boatList.Add(new Boat(2, "Tera  ", 2.87 , 1.23 , 2.37 , 39 , " Besætning 1 person. " , "Teraen er en moderne jolle designet til unge sejlere, typisk fra 8 år og opefter. Teraen er lavet af polyethylen. ", "Ingen Skader "));
+            boatList.Add(new Boat(3, "Feva ", 3.64, 1.42, 2.41, 63," Besætning 2 personer. ", " Fevaen er en meget populær jolle, der kan sejles af en eller to personer. Fevaen er lavet af polyethylen. ", "Ingen Skader"));
+            boatList.Add(new Boat(4, "Laser ", 4.23, 1.42, 3.38, 59,"Besætning 1 person. ", "Laserjollen er en af de mest populære enmandsjoller i verden, brugt både til afslappet sejlads og kapsejlads. Laserjollen er lavet af glasfiberforstærket plastik. ", "Ingen Skader"));
+            boatList.Add(new Boat(5, "Europe ", 3.35, 1.38, 4.8, 60,"Besætning 1 person. ", "Europajollen er en populær enmandsjolle, ideel for sejlere, der er vokset ud af Optimisten. Europajollen er lavet af glasfiber.", "Ingen Skader"));
+            boatList.Add(new Boat(6, "Snipe ", 4.72, 1.52, 4.9, 172,"Besætning 2 personer.", "Snipejollen er en klassisk to-personers jolle kendt for sin taktiske sejlads og holdbarhed. Snipejollen er lavet af glasfiber. ", "Ingen Skader"));
+            boatList.Add(new Boat(7, "Wayfarer ", 4.82, 1.85, 5.2, 167,"Besætning 2-4 personer.", "Wayfarerjollen er en alsidig og robust sejljolle, populær både til kapsejlads, cruising og som træningsbåd. Wayfarerjollen er lavet af glasfiber. ", "Ingen Skader"));
+            boatList.Add(new Boat(8, "Lynæs ",4 , 1.55, 4.2, 150, "Besætning 1-2 personer.", " Lynæs-jollen er en traditionel dansk båd kendt for sin sødygtighed og robuste konstruktion. Lynæs-jollen er traditionelt lavet af egetræ, men den moderne version er lavet af glasfiber. ", "Ingen Skader"));
 
         }
 
@@ -85,7 +85,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
                     b.Width = boats.Width;
                     b.Mast = boats.Mast;
                     b.Weight = boats.Weight;
-                    b.Comment = boats.Comment;
+                    b.Kommentar = boats.Kommentar;
                     b.Description = boats.Description;
                     b.RepairsNeeded = boats.RepairsNeeded;
                     

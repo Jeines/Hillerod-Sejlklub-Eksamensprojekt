@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Hillerød Sejlkulb Eksamensprojekt\HillerødClassLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

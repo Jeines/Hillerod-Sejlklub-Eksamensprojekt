@@ -1,0 +1,81 @@
+﻿@page
+@model HillerødRazorPage.Pages.Boat.GetAllBoatsModel
+@{
+}
+<h1>Boats</h1>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Name
+			</th>
+			<th>
+				Lenght
+			</th>
+			<th>
+				Width
+			</th>
+			<th>
+				Mast
+			</th>
+			<th>
+				Weight
+			</th>
+			<th>
+				Description
+			</th>
+			<th>
+				Comment
+			</th>
+			<th>
+				Repairs Needed
+			</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Boats != null)
+		{
+			foreach (var boat in Model.Boats)
+			{
+				<tr>
+					<td>
+						@boat.BoatId
+					</td>
+					<td>
+						@boat.BoatName
+					</td>
+					<td>
+						@boat.Lenght
+					</td>
+					<td>
+						@boat.Width
+					</td>
+					<td>
+						@boat.Mast
+					</td>
+					<td>
+						@boat.Weight
+					</td>
+					<td>
+						@boat.Description
+					</td>
+					<td>
+						@boat.Kommentar
+					</td>
+					<td>
+						@boat.RepairsNeeded
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<p>
+	<a class="btn btn-primary" asp-page="CreateBoat">Create a new Boat</a>
+</p>
