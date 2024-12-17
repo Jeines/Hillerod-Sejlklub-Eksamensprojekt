@@ -26,7 +26,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public override string ToString()
         {
             //return $"Event Id: " + EventId + " Event name: " + EventName + " Date of event: " + DateOfEvent + " Description: " + DescriptionOfEvent;
-            return $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent}";
+            return $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent}\n";
         }
     }
 }
