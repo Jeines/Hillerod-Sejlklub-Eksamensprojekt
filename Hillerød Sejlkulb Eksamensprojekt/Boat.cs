@@ -17,17 +17,17 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public int Weight { get; set; }
         public string RepairsNeeded { get; set; }
 
-        public string Kommentar { get; set; }
+        public string Comment { get; set; }
 
-        public Boat(int boatId, string name, double lenght, double width, double mast, int weight, string Comment, string description, string repairsNeeded)
+        public Boat(int boatId, string name, double lenght, double width, double mast, int weight, string comment, string description, string repairsNeeded)
         {
             BoatName = name;
-            this.BoatId = boatId;
+            BoatId = boatId;
             Lenght = lenght;   
             Width = width;
             Mast = mast;
             Weight = weight;
-            Kommentar = Comment;
+            Comment = comment;
             Description = description;
             RepairsNeeded = repairsNeeded;
         }
@@ -37,7 +37,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
         public override string ToString()
         {
-            return $"Båd Id: ({BoatId}) |  Båd Navn: {BoatName}  |  Båd Længde: {Lenght}M  | Båd Brede : {Width}M  |  Båd Mast: {Mast}M  |   Båd Vægt: {Weight}Kg  \nBåd Infomation: ({Kommentar}) \nBåd Beskrivelse: {Description}  \nReparation: ({RepairsNeeded})  \n \n";
+            return $"Båd Id: ({BoatId}) |  Båd Navn: {BoatName}  |  Båd Længde: {Lenght}M  | Båd Brede : {Width}M  |  Båd Mast: {Mast}M  |   Båd Vægt: {Weight}Kg  \nBåd Infomation: ({Comment}) \nBåd Beskrivelse: {Description}  \nReparation: ({RepairsNeeded})  \n \n";
         }
 
 

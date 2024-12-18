@@ -13,6 +13,11 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public string SubscriptionType { get; set; }
         public double Price { get; set; }
 
+        public Subscribtion()
+        {
+
+        }
+
         public Subscribtion(int id, string subscriptionType, double price)
         {
             Id = id;

@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace HillerødRazorPage.Pages
+namespace HillerødRazorPage.Pages.AboutClubPage
 {
-    public class FooterInfoModel : PageModel
+    public class AboutClubModel : PageModel
     {
         public void OnGet()
         {
