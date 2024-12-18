@@ -1,5 +1,4 @@
 ﻿using Hillerød_Sejlkulb_Eksamensprojekt;
-using System.ComponentModel;
 
 void PrintBoats(List<Boat> boatList)
 {
@@ -23,7 +22,11 @@ void TestCRUDBoats()
     Console.WriteLine(boats.GetBoatById(4));
     Console.WriteLine();
     Console.WriteLine("Ændrer båd til en ny båd");
+
+    boats.UpdateBoats(2, new Boat(2, "Speedbåd ", 3.9, 2.2, 2.5, 105, " Crew 4 person. ", " Det her er en speedbåd ", "Motor i stykker "));
+
     boats.UpdateBoats(2, new Boat( 2, "Speedbåd ", 3.9, 2.2, 105, " Crew 4 person. ", " Det her er en speedbåd ", "Motor i stykker "));
+
     Console.WriteLine(boats.GetBoatById(2).ToString());
     Console.WriteLine();
     Console.WriteLine("Fjerner båd nummer 5");
@@ -31,7 +34,7 @@ void TestCRUDBoats()
     boats.RemoveBoat(5);
     PrintBoats(boats.GetAllBoats());
     Console.WriteLine();
-    
+
 }
 
 
@@ -60,7 +63,11 @@ void TestCRUDMembers()
     Console.WriteLine(members.GetMember(8));
     Console.WriteLine();
     Console.WriteLine("Ændrer member 11 detaljer");
+
+    members.Update(11, new Member(11, "Pesu ", "Pluma", 50210312, "Pesu.Pluma@Music.com", "El mexico 9"));
+
     members.Update(11, new Member(11, "Pesu ", "Pluma",25, 50210312, "Pesu.Pluma@Music.com","El mexico 9"));
+
     Console.WriteLine(members.GetMember(11).ToString());
     Console.WriteLine();
     Console.WriteLine("Fjerner member nummer 14");
@@ -95,7 +102,7 @@ void TestCRUDSubscribtion()
     Console.WriteLine(sub.GetSubscribtion(2));
     Console.WriteLine();
     Console.WriteLine("Ændre Subscribtion 4");
-    sub.Update(4, new Subscribtion(4, "et eller andet",250));
+    sub.Update(4, new Subscribtion(4, "et eller andet", 250));
     Console.WriteLine(sub.GetSubscribtion(4).ToString());
     Console.WriteLine();
     Console.WriteLine("Fjerner Subscribtion nummer 1 ");
@@ -126,47 +133,59 @@ Console.WriteLine(ved.GetVedtægt(2));
 Console.WriteLine();
 
 
+
 //////////////////////////////////////////////////////////////////////////////
-
-
 
 
 // Test af events
 void PrintEventsList(Dictionary<int, CustomEvent> eventsList)
 {
     foreach (var customEvent in eventsList)
-    { 
-        Console.WriteLine(customEvent); 
+    {
+        Console.WriteLine(customEvent);
     }
 }
 CustomEventsRepo customEventsRepo = new CustomEventsRepo();
 PrintEventsList(customEventsRepo.GetAllCustomEvents());
 TestCRUDMethods();
 
-// Metode der tester CRUD
-//customEventsRepo.TestCRUDMethods();
 
+// Metode der tester CRUD
 void TestCRUDMethods()
 {
-    
-    Console.WriteLine();
-    Console.WriteLine("Tilføjer nyt event nummer 13");
-    customEventsRepo.AddEvent(13, "TESTESTETSTTESTETS", new DateTime(2024, 11, 26, 12, 0, 0), "");
-    Console.WriteLine();
+    Console.WriteLine("\n" + "Tilføjer nyt event nummer 13"+"\n");
+    customEventsRepo.AddEvent(13, "TESTESTETSTTESTETS", new DateTime(2024, 11, 26, 12, 0, 0),"", new List<Member>());
     Console.WriteLine("Finder event nummer 2");
     Console.WriteLine(customEventsRepo.GetEvent(2).ToString());
     Console.WriteLine();
     Console.WriteLine("Ændrer event 7 til den 9. Maj");
-    customEventsRepo.UpdateCustomEvent(2, "Første torsdagssejlads", new DateTime(2024, 5, 9), "Træningssejlads for seniorer og juniorer. Juniorer mødes på havnen kl. 16:30. Seniorer mødes på havnen kl. 17:00.");
+    customEventsRepo.UpdateCustomEvent(2, "Første torsdagssejlads", new DateTime(2024, 5, 9), "Træningssejlads for seniorer og juniorer. Juniorer mødes på havnen kl. 16:30. Seniorer mødes på havnen kl. 17:00.", new List<Member>());
     Console.WriteLine(customEventsRepo.GetEvent(2).ToString());
     Console.WriteLine();
     Console.WriteLine("Fjerner event 7");
     Console.WriteLine();
     customEventsRepo.DeleteEvent(2);
     PrintEventsList(customEventsRepo.GetAllCustomEvents());
-    Console.WriteLine();
+    Console.WriteLine("\n" + "Tilføjer medlemmer til events" + "\n");
+    customEventsRepo.AddParticipantToCustomEvent(5, members.GetMember(1));
+    customEventsRepo.AddParticipantToCustomEvent(5, members.GetMember(4));
+    customEventsRepo.AddParticipantToCustomEvent(5, members.GetMember(15));
+    customEventsRepo.AddParticipantToCustomEvent(5, members.GetMember(3));
+    customEventsRepo.AddParticipantToCustomEvent(5, members.GetMember(5));
+    Console.WriteLine(customEventsRepo.GetEvent(5).ToString());
 
 }
+
+
+
+
+
+
+
+
+
+
+
 void PrintSenior(List<Member>members)
 {
     foreach (Member member in members) 
@@ -177,6 +196,7 @@ void PrintSenior(List<Member>members)
 }
 MembersRepo membersRepo = new MembersRepo();
 PrintSenior(members.GetAllMembers());
+
 
 Console.WriteLine();
 Console.WriteLine();

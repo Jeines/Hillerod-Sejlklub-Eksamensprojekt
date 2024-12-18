@@ -12,21 +12,46 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public string EventName { get; set; }
         public DateTime DateOfEvent { get; set; }
         public string DescriptionOfEvent { get; set; }
+        public List<Member> Participants { get; set; } = new List<Member>();
 
 
 
-        public CustomEvent(int eventId, string eventName, DateTime dateOfEvent, string descriptionOfEvent)
+        public CustomEvent(int eventId, string eventName, DateTime dateOfEvent, string descriptionOfEvent, List<Member> participants)
         {
             EventId = eventId;
             EventName = eventName;
             DateOfEvent = dateOfEvent;
             DescriptionOfEvent = descriptionOfEvent;
+            Participants = participants;
+
         }
+
+        public void AddParticipant(Member member)
+        {
+            if (!Participants.Contains(member))
+                Participants.Add(member);
+        }
+
+
+
+
+
+
+
+
+
 
         public override string ToString()
         {
-            //return $"Event Id: " + EventId + " Event name: " + EventName + " Date of event: " + DateOfEvent + " Description: " + DescriptionOfEvent;
-            return $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent}\n";
+            string eventDetails = $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent}\nParticipants:\n";
+
+            foreach (var participant in Participants)
+            {
+                eventDetails += participant.ToString() + "\n";
+
+            }
+            return eventDetails;
+          
         }
     }
 }
