@@ -23,7 +23,7 @@ void TestCRUDBoats()
     Console.WriteLine(boats.GetBoatById(4));
     Console.WriteLine();
     Console.WriteLine("Ændrer båd til en ny båd");
-    boats.UpdateBoats(2, new Boat( 2, "Speedbåd ", 3.9, 2.2, 2.5, 105, " Crew 4 person. ", " Det her er en speedbåd ", "Motor i stykker "));
+    boats.UpdateBoats(2, new Boat( 2, "Speedbåd ", 3.9, 2.2, 105, " Crew 4 person. ", " Det her er en speedbåd ", "Motor i stykker "));
     Console.WriteLine(boats.GetBoatById(2).ToString());
     Console.WriteLine();
     Console.WriteLine("Fjerner båd nummer 5");
@@ -207,7 +207,7 @@ void PrintJunior(List<Member> members)
 
 
 
-
+Console.WriteLine(boats.GetDinghyById(1).ToString());
 
 
 
