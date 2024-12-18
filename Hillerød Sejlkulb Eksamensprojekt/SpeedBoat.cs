@@ -18,7 +18,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
         public override string ToString()
         {
-            return $"Båd Id: ({BoatId}) |  Båd Navn: {BoatName}  |  Båd Længde: {Lenght}M  | Båd Brede : {Width}M  |  Båd Vægt: {Weight}Kg |  Udboard motor: {OutBoardEngin} speed   \nBåd Infomation: ({Kommentar}) \nBåd Beskrivelse: {Description}  \nReparation: ({RepairsNeeded})";
+            return $"Båd Id: ({BoatId}) |  Båd Navn: {BoatName}  |  Båd Længde: {Lenght}M  | Båd Brede : {Width}M  |  Båd Vægt: {Weight}Kg |  Udboard motor: {OutBoardEngin} speed   \nBåd Infomation: ({Comment}) \nBåd Beskrivelse: {Description}  \nReparation: ({RepairsNeeded})";
         }
 
 

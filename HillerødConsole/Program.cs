@@ -171,7 +171,7 @@ void TestCRUDMethods()
     Console.WriteLine("\n" + "tilføjer båd til event uden medlem:" + "\n");
     customEventsRepo.AddEventBoatToCustomEvent(3, boatId: boats.GetBoatById(2));
     Console.WriteLine(customEventsRepo.GetEvent(3).ToString());
-    Console.WriteLine("\n" + "Tilføjer båd og medlem til event:");
+    Console.WriteLine("\n" + "Tilføjer båd og medlem til event:" + "\n");
     customEventsRepo.AddEventBoatToCustomEvent(6, boatId: boats.GetBoatById(3));
     customEventsRepo.AddParticipantToCustomEvent(6, members.GetMember(5));
     Console.WriteLine(customEventsRepo.GetEvent(6).ToString());
