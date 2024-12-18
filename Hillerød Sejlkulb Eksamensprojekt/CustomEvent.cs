@@ -32,6 +32,15 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
                 Participants.Add(member);
         }
 
+
+
+
+
+
+
+
+
+
         public override string ToString()
         {
             return $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent}\nParticipants:\n\n{string.Join("\n",Participants.Select(m => m.ToString()))}";
