@@ -1,0 +1,45 @@
+﻿@page
+@model HillerødRazorPage.Pages.SubPage.GetAllSubsModel
+@{
+}
+<h1>Medlemskaber</h1>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Medlems niveau
+			</th>
+			<th>
+				Pris
+			</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Subscription != null)
+		{
+			foreach (var sub in Model.Subscription)
+			{
+				<tr>
+					<td>
+						@sub.Id 
+					</td>
+					<td>
+						@sub.SubscriptionType 
+					</td>
+					<td>
+						@sub.Price kr
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<p>
+	<a class="btn btn-primary" asp-page="CreateSub"> Lav et nyt Medlemskab </a>
+</p>

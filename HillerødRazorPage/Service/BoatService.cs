@@ -12,6 +12,12 @@ namespace HillerødRazorPage.Service
         {
             _boats = _boatRepo.GetAllBoats();
         }
+
+        public void AddBoat(Boat boat)
+        {
+            _boats.Add(boat);
+        }
+
         public List<Boat> GetBoats()
         {
             return _boats;
