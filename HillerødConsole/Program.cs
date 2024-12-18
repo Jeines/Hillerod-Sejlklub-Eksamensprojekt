@@ -22,7 +22,11 @@ void TestCRUDBoats()
     Console.WriteLine(boats.GetBoatById(4));
     Console.WriteLine();
     Console.WriteLine("Ændrer båd til en ny båd");
+
     boats.UpdateBoats(2, new Boat(2, "Speedbåd ", 3.9, 2.2, 2.5, 105, " Crew 4 person. ", " Det her er en speedbåd ", "Motor i stykker "));
+
+    boats.UpdateBoats(2, new Boat( 2, "Speedbåd ", 3.9, 2.2, 105, " Crew 4 person. ", " Det her er en speedbåd ", "Motor i stykker "));
+
     Console.WriteLine(boats.GetBoatById(2).ToString());
     Console.WriteLine();
     Console.WriteLine("Fjerner båd nummer 5");
@@ -59,7 +63,11 @@ void TestCRUDMembers()
     Console.WriteLine(members.GetMember(8));
     Console.WriteLine();
     Console.WriteLine("Ændrer member 11 detaljer");
+
     members.Update(11, new Member(11, "Pesu ", "Pluma", 50210312, "Pesu.Pluma@Music.com", "El mexico 9"));
+
+    members.Update(11, new Member(11, "Pesu ", "Pluma",25, 50210312, "Pesu.Pluma@Music.com","El mexico 9"));
+
     Console.WriteLine(members.GetMember(11).ToString());
     Console.WriteLine();
     Console.WriteLine("Fjerner member nummer 14");
@@ -178,13 +186,48 @@ void TestCRUDMethods()
 
 
 
+void PrintSenior(List<Member>members)
+{
+    foreach (Member member in members) 
+    {
+        if (member.Senior)
+        Console.WriteLine(member);
+    }
+}
+MembersRepo membersRepo = new MembersRepo();
+PrintSenior(members.GetAllMembers());
+
+
+Console.WriteLine();
+Console.WriteLine();
+
+void PrintJunior(List<Member> members)
+{
+    foreach (Member member in members)
+    {
+        if (member.junior)
+            Console.WriteLine(member);
+    }
+}
+    PrintJunior(members.GetAllMembers());
 
 
 
+//void PrintMembersList(List<Member> memberList)
+//{
+//    foreach (Member members in memberList)
+//    {
+//        Console.WriteLine(members);
+//    }
+//}
+
+//MembersList print program
+//MembersRepo members = new MembersRepo();
+//PrintMembersList(members.GetAllMembers());
 
 
 
-
+Console.WriteLine(boats.GetDinghyById(1).ToString());
 
 
 
@@ -216,3 +259,4 @@ void TestCRUDMethods()
 
 //    }
 //}
+

@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace HillerødRazorPage.Pages
 {
-    public class PrivacyModel : PageModel
+    public class MedlemModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly ILogger<MedlemModel> _logger;
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public MedlemModel(ILogger<MedlemModel> logger)
         {
             _logger = logger;
         }

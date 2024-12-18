@@ -51,6 +51,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
             }
             return eventDetails;
+          
         }
     }
 }
