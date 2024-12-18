@@ -14,7 +14,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public string DescriptionOfEvent { get; set; }
         public List<Member> Participants { get; set; } = new List<Member>();
 
-        
+
 
         public CustomEvent(int eventId, string eventName, DateTime dateOfEvent, string descriptionOfEvent, List<Member> participants)
         {
@@ -25,7 +25,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             Participants = participants;
 
         }
-        
+
         public void AddParticipant(Member member)
         {
             if (!Participants.Contains(member))
@@ -43,7 +43,14 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
         public override string ToString()
         {
-            return $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent}\nParticipants:\n\n{string.Join("\n",Participants.Select(m => m.ToString()))}";
+            string eventDetails = $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent}\nParticipants:\n";
+
+            foreach (var participant in Participants)
+            {
+                eventDetails += participant.ToString() + "\n";
+
+            }
+            return eventDetails;
         }
     }
 }
