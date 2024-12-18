@@ -190,7 +190,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
                     d.Width = dinghy.Width;
                     d.Mast = dinghy.Mast;
                     d.Weight = dinghy.Weight;
-                    d.Kommentar = dinghy.Kommentar;
+                    d.Comment = dinghy.Comment;
                     d.Description = dinghy.Description;
                     d.RepairsNeeded = dinghy.RepairsNeeded;
 
@@ -213,7 +213,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
                     s.Width = speedBoat.Width;
                     s.Weight = speedBoat.Weight;
                     s.OutBoardEngin = speedBoat.OutBoardEngin;
-                    s.Kommentar = speedBoat.Kommentar;
+                    s.Comment = speedBoat.Comment;
                     s.Description = speedBoat.Description;
                     s.RepairsNeeded = speedBoat.RepairsNeeded;
 

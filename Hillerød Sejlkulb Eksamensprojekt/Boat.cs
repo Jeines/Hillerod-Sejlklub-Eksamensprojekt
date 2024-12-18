@@ -21,7 +21,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
      
 
-        public Boat(int boatId, string name, double lenght, double width, double weight, string Comment, string description, string repairsNeeded)
+        public Boat(int boatId, string name, double lenght, double width, double weight, string comment, string description, string repairsNeeded)
 
         {
             BoatName = name;
@@ -42,7 +42,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
             
 
-            return $"Båd Id: ({BoatId}) |  Båd Navn: {BoatName}  |  Båd Længde: {Lenght}M  | Båd Brede : {Width}M  |  Båd Vægt: {Weight}Kg  \nBåd Infomation: ({Kommentar}) \nBåd Beskrivelse: {Description}  \nReparation: ({RepairsNeeded})";
+            return $"Båd Id: ({BoatId}) |  Båd Navn: {BoatName}  |  Båd Længde: {Lenght}M  | Båd Brede : {Width}M  |  Båd Vægt: {Weight}Kg  \nBåd Infomation: ({Comment}) \nBåd Beskrivelse: {Description}  \nReparation: ({RepairsNeeded})";
 
         }
 
