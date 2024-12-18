@@ -16,16 +16,20 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public double Weight { get; set; }
         public string RepairsNeeded { get; set; }
 
-        public string Kommentar { get; set; }
+        public string Comment { get; set; }
+
+
+     
 
         public Boat(int boatId, string name, double lenght, double width, double weight, string Comment, string description, string repairsNeeded)
+
         {
             BoatName = name;
-            this.BoatId = boatId;
+            BoatId = boatId;
             Lenght = lenght;   
             Width = width;
             Weight = weight;
-            Kommentar = Comment;
+            Comment = comment;
             Description = description;
             RepairsNeeded = repairsNeeded;
         }
@@ -35,7 +39,11 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
         public override string ToString()
         {
+
+            
+
             return $"Båd Id: ({BoatId}) |  Båd Navn: {BoatName}  |  Båd Længde: {Lenght}M  | Båd Brede : {Width}M  |  Båd Vægt: {Weight}Kg  \nBåd Infomation: ({Kommentar}) \nBåd Beskrivelse: {Description}  \nReparation: ({RepairsNeeded})";
+
         }
 
 

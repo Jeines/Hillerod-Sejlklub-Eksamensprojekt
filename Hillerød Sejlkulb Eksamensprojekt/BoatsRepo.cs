@@ -167,7 +167,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
                     b.Lenght = boats.Lenght;
                     b.Width = boats.Width;
                     b.Weight = boats.Weight;
-                    b.Kommentar = boats.Kommentar;
+                    b.Comment = boats.Comment;
                     b.Description = boats.Description;
                     b.RepairsNeeded = boats.RepairsNeeded;
                     
