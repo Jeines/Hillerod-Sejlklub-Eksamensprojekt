@@ -13,17 +13,18 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public DateTime DateOfEvent { get; set; }
         public string DescriptionOfEvent { get; set; }
         public List<Member> Participants { get; set; } = new List<Member>();
+        public List<Boat> EventBoats { get; set; } = new List<Boat>();
 
 
 
-        public CustomEvent(int eventId, string eventName, DateTime dateOfEvent, string descriptionOfEvent, List<Member> participants)
+        public CustomEvent(int eventId, string eventName, DateTime dateOfEvent, string descriptionOfEvent, List<Boat> eventBoats, List<Member> participants)
         {
             EventId = eventId;
             EventName = eventName;
             DateOfEvent = dateOfEvent;
             DescriptionOfEvent = descriptionOfEvent;
             Participants = participants;
-
+            EventBoats = eventBoats;
         }
 
         public void AddParticipant(Member member)
@@ -33,12 +34,20 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         }
 
 
+
         public string ParticipantToString()
         {
             string temp = "";
             foreach (Member member in Participants)
                 temp += member;
             return temp;
+        }
+
+
+        public void AddEventBoat(Boat boat)
+        {
+            if (!EventBoats.Contains(boat))
+                EventBoats.Add(boat);
         }
 
 
@@ -51,15 +60,33 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
         public override string ToString()
         {
-            string eventDetails = $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent}\nParticipants:\n";
+            string eventDetails = $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent} \n\nEventboat: \n\n";
 
-            foreach (var participant in Participants)
+            if (EventBoats.Count > 0)
             {
-                eventDetails += participant.ToString() + "\n";
+                foreach (var Eventboat in EventBoats)
+                {
+                    eventDetails += Eventboat.ToString() + "\n\nParticipants to the event: \n\n";
+                }
+            }
+            if (EventBoats.Count == 0)
+            {
+                eventDetails += "No eventboat yet\n\n" + "Participants:\n\n";
+            }
+            if (Participants.Count > 0)
+            {
 
+                foreach (var participant in Participants)
+                {
+                    eventDetails += participant.ToString() + "\n";
+
+                }
+            }
+            if (Participants.Count == 0)
+            {
+                eventDetails += "No participants yet\n" + "\n";
             }
             return eventDetails;
-          
         }
     }
 }
