@@ -87,6 +87,11 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             return _events;
         }
 
+        //public static List<CustomEvent> GetCustomEvents()
+        //{
+        //    return CustomEvent.Values.Tolist();
+        //}
+
         //public void RegisterMemberForEvent(int eventId, Member member)
         //{
         //    if (_events.Contains(eventId))

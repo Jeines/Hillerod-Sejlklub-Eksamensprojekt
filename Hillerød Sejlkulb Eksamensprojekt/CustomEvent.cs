@@ -33,11 +33,23 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
                 Participants.Add(member);
         }
 
+
+
+        public string ParticipantToString()
+        {
+            string temp = "";
+            foreach (Member member in Participants)
+                temp += member;
+            return temp;
+        }
+
+
         public void AddEventBoat(Boat boat)
         {
             if (!EventBoats.Contains(boat))
                 EventBoats.Add(boat);
         }
+
 
 
 

@@ -7,6 +7,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddSingleton<BoatService, BoatService>();
 builder.Services.AddSingleton<MembersService, MembersService>();
 builder.Services.AddSingleton<SubService, SubService>();
+builder.Services.AddSingleton<EventService, EventService>();
 
 var app = builder.Build();
 
