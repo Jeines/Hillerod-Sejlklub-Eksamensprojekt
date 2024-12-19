@@ -2,19 +2,24 @@
 
 namespace HillerødRazorPage.Service
 {
-    //public class EventService
-    //{
-    //    private List<Boat> _boats;
+    public class EventService
+    {
+        private Dictionary<int, CustomEvent> _event;
 
-    //    private BoatsRepo _boatRepo = new BoatsRepo();
+        private CustomEventsRepo _eventRepo = new CustomEventsRepo();
 
-    //    public BoatService()
-    //    {
-    //        _boats = _boatRepo.GetAllBoats();
-    //    }
-    //    public List<Boat> GetBoats()
-    //    {
-    //        return _boats;
-    //    }
-    //}
+        public EventService()
+        {
+            _event = _eventRepo.GetAllCustomEvents();
+        }
+        public Dictionary<int, CustomEvent> GetAllCustomEvents()
+        {
+            return _event;
+        }
+        //public static List<CustomEvent> GetCustomEvents()
+        //{
+        //    return CustomEvent.Values.Tolist();
+        //}
+    }
+   
 }

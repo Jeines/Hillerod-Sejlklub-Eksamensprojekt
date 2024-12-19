@@ -33,6 +33,14 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         }
 
 
+        public string ParticipantToString()
+        {
+            string temp = "";
+            foreach (Member member in Participants)
+                temp += member;
+            return temp;
+        }
+
 
 
 
