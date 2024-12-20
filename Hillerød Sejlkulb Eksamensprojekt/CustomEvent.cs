@@ -15,7 +15,10 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         public List<Member> Participants { get; set; } = new List<Member>();
         public List<Boat> EventBoats { get; set; } = new List<Boat>();
 
+        public CustomEvent()
+        {
 
+        }
 
         public CustomEvent(int eventId, string eventName, DateTime dateOfEvent, string descriptionOfEvent, List<Boat> eventBoats, List<Member> participants)
         {

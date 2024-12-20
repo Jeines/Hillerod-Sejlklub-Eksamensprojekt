@@ -8,6 +8,13 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 {
     public class Dinghy : Boat
     {
+        public Dinghy()
+        {
+
+        }
+        
+        
+
         public Dinghy(int boatId, string name, double lenght, double width, double mast, int weight, string Comment, string description, string repairsNeeded) : base(boatId, name, lenght, width, weight, Comment, description, repairsNeeded)
         {
             Mast = mast;
@@ -17,7 +24,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
         public override string ToString()
         {
-          return $"Båd Id: ({BoatId}) |  Båd Navn: {BoatName}  |  Båd Længde: {Lenght}M  | Båd Brede : {Width}M  |  Båd Vægt: {Weight}Kg |  Mast: {Mast}  \nBåd Infomation: ({Comment}) \nBåd Beskrivelse: {Description}  \nReparation: ({RepairsNeeded})";
+          return $"Båd Id: ({BoatId}) |  Båd Navn: {BoatName}  |  Båd Længde: {Lenght}M  | Båd Brede : {Width}M  |  Båd Vægt: {Weight}Kg |  Mast: {Mast}  \nBåd Infomation: ({Comment}) \nBåd Beskrivelse: {Description}  \nReparation: ({RepairsNeeded})\n";
         }
     }
 

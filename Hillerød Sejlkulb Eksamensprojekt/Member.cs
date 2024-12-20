@@ -24,6 +24,10 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             get { return Age < 17; }
         }
 
+        public Member()
+        {
+
+        }
 
         public Member(int id, string name, string lastname,int age, int phonenumber, string email, string address)
         {
