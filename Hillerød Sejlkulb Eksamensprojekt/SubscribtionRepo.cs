@@ -53,7 +53,9 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             }
             return false;
         }
-        
+
+
+        // her laver vi en methode som kan bruges til at hente alle Subscribtions fra vores List<Subscribtion>
         public List<Subscribtion> GetAllSubscribtions()
         {
             return subList;

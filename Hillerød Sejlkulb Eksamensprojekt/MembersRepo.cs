@@ -65,7 +65,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             }
             return null!;
         }
-
+        // her laver vi en methode som kan bruges til at hente alle members fra vores List<Member>
         public List<Member> GetAllMembers()
         {
             return memberList;

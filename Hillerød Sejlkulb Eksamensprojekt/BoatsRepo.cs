@@ -223,6 +223,8 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             return speedBoat;
         }
 
+
+        // her laver vi en methode som kan bruges til at hente alle både fra vores List<Boat>
         public List<Boat> GetAllBoats()
         {
             return boatList;

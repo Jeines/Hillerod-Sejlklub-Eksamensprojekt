@@ -90,7 +90,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             }
             return false;
         }
-        //  Printer alle events
+        // her laver vi en methode som kan bruges til at hente alle Events fra vores Dictionary<CustomEvent> 
         public Dictionary<int, CustomEvent> GetAllCustomEvents()
         {
             return _events;
