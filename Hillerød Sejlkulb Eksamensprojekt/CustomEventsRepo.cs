@@ -1,4 +1,5 @@
-﻿using System.Xml.Schema;
+﻿using System.Reflection.Metadata.Ecma335;
+using System.Xml.Schema;
 
 namespace Hillerød_Sejlkulb_Eksamensprojekt
 {
@@ -35,7 +36,8 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             var customEvent = new CustomEvent(eventId, eventName, dateOfEvent, descriptionOfEvent, eventBoat, participant) { };
             _events.TryAdd(_nextId++, customEvent);
         }
-        // Gør det muligt at se events. 
+
+        // Gør det muligt at se events ud fra bestemt id. 
         public CustomEvent GetEvent(int eventId)
         {
             if (_events.ContainsKey(eventId))
@@ -43,7 +45,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             return null;
         }
 
-        // Gør det muligt at opdatere events ud fra id.
+        // Gør det muligt at opdatere events ud fra id. Den returnerer derimod false hvis den ikke kan finde id. 
         public bool UpdateCustomEvent(int eventId, string eventName, DateTime dateOfEvent, string descriptionOfEvent, List<Boat>eventBoat, List<Member>participant)
         {
             if (_events.ContainsKey(eventId))
@@ -58,48 +60,41 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             return false;
         }
 
-        // Sletter et bestemt event.
-        public void DeleteEvent(int eventId)
-        {
-            _events.Remove(eventId);
+        // Sletter et bestemt event ved hjælp af id. 
+        public bool DeleteEvent(int eventId)
+        { 
+            if (_events.ContainsKey(eventId))
+            {
+                _events.Remove(eventId);
+
+            }
+            return false;
         }
 
-        // Tilføjer deltager til et bestemt event.
-        public void AddParticipantToCustomEvent(int eventId, Member id)
+        // Tilføjer deltager til et bestemt event. Den søger efter event ud fra id og tilføjer en bestemt deltager med id. 
+        public bool AddParticipantToCustomEvent(int eventId, Member id)
         {
             if (_events.ContainsKey(eventId))
             {
                 _events[eventId].AddParticipant(id);
             }
+            return false;
         }
         
-        // Tilføjer båd til et bestemt event.
-        public void AddEventBoatToCustomEvent(int eventId, Boat boatId)
+        // Tilføjer båd til et bestemt event. Den søger efter event ud fra id og tilføjer en bestemt båd ud fra id. 
+        public bool AddEventBoatToCustomEvent(int eventId, Boat boatId)
         {
             if (_events.ContainsKey(eventId))
             {
                 _events[eventId].AddEventBoat(boatId);
             }
+            return false;
         }
         //  Printer alle events
         public Dictionary<int, CustomEvent> GetAllCustomEvents()
         {
             return _events;
         }
-
-        //public static List<CustomEvent> GetCustomEvents()
-        //{
-        //    return CustomEvent.Values.Tolist();
-        //}
-
-        //public void RegisterMemberForEvent(int eventId, Member member)
-        //{
-        //    if (_events.Contains(eventId))
-        //    {
-        //        _events[eventId].AddParticipant(member);
-        //    }
-        //}
-
     }
 
 

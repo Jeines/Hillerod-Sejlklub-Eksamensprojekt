@@ -30,13 +30,16 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             EventBoats = eventBoats;
         }
 
-        public void AddParticipant(Member member)
+
+        // Gær det muligt at tilføje et medlem. 
+        public bool AddParticipant(Member member)
         {
             if (!Participants.Contains(member))
+            {
                 Participants.Add(member);
+            }
+            return false;
         }
-
-
 
         public string ParticipantToString()
         {
@@ -47,10 +50,14 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         }
 
 
-        public void AddEventBoat(Boat boat)
+        // Gør det muligt at tilføje en båd til et event. 
+        public bool AddEventBoat(Boat boat)
         {
             if (!EventBoats.Contains(boat))
+            {
                 EventBoats.Add(boat);
+            }
+            return false;
         }
 
 
@@ -60,6 +67,8 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
 
 
+
+        // ToString der printes med event. Den finder ud af om der er både eller ej til et event og printer info. Det samme gælder for deltagere lige efter den er færdig med at finde deltagere.
 
         public override string ToString()
         {
