@@ -47,7 +47,7 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
         }
 
 
-        // Gør det muligt at tilfæje en båd til et event. 
+        // Gør det muligt at tilføje en båd til et event. 
         public bool AddEventBoat(Boat boat)
         {
             if (!EventBoats.Contains(boat))
@@ -63,7 +63,10 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
 
 
 
+
+
         // ToString der printes med event. Den finder ud af om der er både eller ej til et event og printer info. Det samme gælder for deltagere lige efter den er færdig med at finde deltagere.
+
         public override string ToString()
         {
             string eventDetails = $"Event name: {EventName} \nEvent Id: {EventId} \nDate: {DateOfEvent} \nDescription: {DescriptionOfEvent} \n\nEventboat: \n\n";
