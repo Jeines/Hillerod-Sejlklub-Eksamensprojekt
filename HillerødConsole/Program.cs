@@ -1,5 +1,11 @@
 ﻿using Hillerød_Sejlkulb_Eksamensprojekt;
 #region Boats
+
+
+
+
+Console.WriteLine("/////////////////////////////////////////////////// Boat Tests /////////////////////////////////////////////////// \n \n \n\n\n");
+
 void PrintBoats(List<Boat> boatList)
 {
     foreach (Boat Boats in boatList)
@@ -12,7 +18,10 @@ void PrintBoats(List<Boat> boatList)
 //BoatsList print program
 BoatsRepo boats = new BoatsRepo();
 PrintBoats(boats.GetAllBoats());
+Console.WriteLine("\n\n");
+Console.WriteLine("---------------------- Test af CRUD til Boats ----------------------\n\n\n");
 TestCRUDBoats();
+
 
 
 void TestCRUDBoats()
@@ -31,12 +40,12 @@ void TestCRUDBoats()
     Console.WriteLine();
     boats.RemoveBoat(5);
     PrintBoats(boats.GetAllBoats());
-    Console.WriteLine();
+    Console.WriteLine("\n\n");
 
 }
 #endregion
 
-///////////////////////////////////////////////////////////////////////////
+Console.WriteLine("/////////////////////////////////////////////////// Member Tests /////////////////////////////////////////////////// \n \n \n\n\n");
 
 #region Members
 void PrintMembersList(List<Member> memberList)
@@ -51,6 +60,8 @@ void PrintMembersList(List<Member> memberList)
 //MembersList print program
 MembersRepo members = new MembersRepo();
 PrintMembersList(members.GetAllMembers());
+Console.WriteLine("\n\n");
+Console.WriteLine("---------------------- Test af CRUD til Members ----------------------\n\n\n");
 TestCRUDMembers();
 
 
@@ -70,11 +81,11 @@ void TestCRUDMembers()
     Console.WriteLine();
     members.RemoveMember(14);
     PrintMembersList(members.GetAllMembers());
-    Console.WriteLine();
+    Console.WriteLine("\n\n");
 }
 #endregion
 
-/////////////////////////////////////////////////////////////////////////////
+Console.WriteLine("/////////////////////////////////////////////////// Subscribtion Tests /////////////////////////////////////////////////// \n \n \n\n\n");
 
 #region Subscribtion
 void PrintSubscribtionList(List<Subscribtion> subList)
@@ -88,6 +99,8 @@ void PrintSubscribtionList(List<Subscribtion> subList)
 // Subscribtion og priser print program
 SubscribtionRepo sub = new SubscribtionRepo();
 PrintSubscribtionList(sub.GetAllSubscribtions());
+Console.WriteLine("\n\n");
+Console.WriteLine("---------------------- Test af CRUD til Subscribtion ----------------------\n\n\n");
 TestCRUDSubscribtion();
 
 
@@ -105,12 +118,12 @@ void TestCRUDSubscribtion()
     Console.WriteLine();
     sub.RemoveSubscription(1);
     PrintSubscribtionList(sub.GetAllSubscribtions());
-    Console.WriteLine();
+    Console.WriteLine("\n\n");
 
 }
 #endregion
 
-//////////////////////////////////////////////////////////////////////////
+Console.WriteLine("/////////////////////////////////////////////////// Vedtægter Tests /////////////////////////////////////////////////// \n \n \n\n\n");
 
 
 
@@ -126,10 +139,10 @@ Vedtægter ved = new Vedtægter();
 PrintVedtægter(ved.GetVedtægter());
 Console.WriteLine();
 Console.WriteLine(ved.GetVedtægt(2));
-Console.WriteLine();
+Console.WriteLine("\n\n");
 #endregion 
 
-//////////////////////////////////////////////////////////////////////////////
+Console.WriteLine("/////////////////////////////////////////////////// Event Tests /////////////////////////////////////////////////// \n \n \n\n\n");
 
 #region Events
 // Test af events 
@@ -142,6 +155,8 @@ void PrintEventsList(Dictionary<int, CustomEvent> eventsList)
 }
 CustomEventsRepo customEventsRepo = new CustomEventsRepo();
 PrintEventsList(customEventsRepo.GetAllCustomEvents());
+Console.WriteLine("\n\n");
+Console.WriteLine("---------------------- Test af CRUD til Events ----------------------\n\n\n");
 TestCRUDMethods();
 
 
