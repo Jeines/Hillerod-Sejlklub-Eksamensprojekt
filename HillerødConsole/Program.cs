@@ -1,5 +1,5 @@
 ﻿using Hillerød_Sejlkulb_Eksamensprojekt;
-
+#region Boats
 void PrintBoats(List<Boat> boatList)
 {
     foreach (Boat Boats in boatList)
@@ -34,11 +34,11 @@ void TestCRUDBoats()
     Console.WriteLine();
 
 }
-
+#endregion
 
 ///////////////////////////////////////////////////////////////////////////
 
-
+#region Members
 void PrintMembersList(List<Member> memberList)
 {
     foreach (Member members in memberList)
@@ -72,11 +72,11 @@ void TestCRUDMembers()
     PrintMembersList(members.GetAllMembers());
     Console.WriteLine();
 }
-
+#endregion
 
 /////////////////////////////////////////////////////////////////////////////
 
-
+#region Subscribtion
 void PrintSubscribtionList(List<Subscribtion> subList)
 {
     foreach (Subscribtion subscribtion in subList)
@@ -108,13 +108,13 @@ void TestCRUDSubscribtion()
     Console.WriteLine();
 
 }
-
+#endregion
 
 //////////////////////////////////////////////////////////////////////////
 
 
 
-
+#region Vedtægter
 void PrintVedtægter(List<string> vedtægterrepo)
 {
     foreach (string vedtægter in vedtægterrepo)
@@ -127,12 +127,12 @@ PrintVedtægter(ved.GetVedtægter());
 Console.WriteLine();
 Console.WriteLine(ved.GetVedtægt(2));
 Console.WriteLine();
-
+#endregion 
 
 //////////////////////////////////////////////////////////////////////////////
 
-
-// Test af events
+#region Events
+// Test af events 
 void PrintEventsList(Dictionary<int, CustomEvent> eventsList)
 {
     foreach (var customEvent in eventsList)
@@ -145,7 +145,7 @@ PrintEventsList(customEventsRepo.GetAllCustomEvents());
 TestCRUDMethods();
 
 
-// Metode der tester CRUD
+// Metode der tester CRUD.
 void TestCRUDMethods()
 {
     Console.WriteLine("\n" + "Tilføjer nyt event nummer 13" + "\n");
@@ -177,6 +177,6 @@ void TestCRUDMethods()
     Console.WriteLine(customEventsRepo.GetEvent(6).ToString());
 
 }
-
+#endregion
 
 Console.WriteLine(boats.GetDinghyById(1).ToString());
