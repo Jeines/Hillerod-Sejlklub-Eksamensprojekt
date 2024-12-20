@@ -37,7 +37,14 @@ namespace Hillerød_Sejlkulb_Eksamensprojekt
             }
             return false;
         }
-        
+
+        public string ParticipantToString()
+        {
+            string temp = "";
+            foreach (Member member in Participants)
+                temp += member;
+            return temp;
+        }
 
 
         // Gør det muligt at tilfæje en båd til et event. 
